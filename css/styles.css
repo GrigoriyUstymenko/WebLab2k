@@ -6,6 +6,8 @@
   --bg-color-reddish: lightsalmon;
   --bg-color-aquamarine: aquamarine;
   --bg-color-white: white;
+  --border-color: black;
+  --small-border-length: 1px;
 }
 
 header,
@@ -27,6 +29,10 @@ footer span {
 
 header {
   grid-row: 1;
+}
+
+.header-text {
+  padding: 30px;
 }
 
 footer {
@@ -76,23 +82,41 @@ body main .small-upper {
   grid-row: 1;
   padding: 30px;
 }
-body main .small-left {
-  background-color: var(--bg-color-white);
-  grid-row: 2;
-  grid-column: 5;
+.small-left, .small-right {
   padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-body main .small-right {
+.small-right {
   background-color: var(--bg-color-aquamarine);
   grid-row: 2;
   grid-column: 7;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.small-left {
+  background-color: var(--bg-color-white);
+  grid-row: 2;
+  grid-column: 5;
+}
+
+.number-form {
+  display: none;
+}
+
+.inserted-table, .inserted-cell {
+  border: var(--small-border-length) solid var(--border-color);
+  background-color: var(--bg-color-white);
+}
+
+.inserted-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.inserted-cell {
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

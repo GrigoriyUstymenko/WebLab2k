@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab 1</title>
+    <title>Lab 2</title>
     <link href="/css/styles.css" rel="stylesheet" />
+    <script src="/script.js" type="text/javascript" defer></script>
   </head>
   <body>
     <header>
       <span>Welcome to page 1!</span>
-      <p>
+      <p class="header-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -34,7 +35,7 @@
           consequatur tempore a doloribus dolore qui eveniet maiores sit galisum
           voluptas hic ratione omnis?
         </p>
-        <img src="/images/img.png" alt="Mario" usemap="#map" />
+        <img class="block-image" src="/images/img.png" alt="Mario" usemap="#map" />
         <map id="map" name="map">
           <area
             shape="rect"
@@ -86,16 +87,25 @@
           consequatur tempore a doloribus dolore qui eveniet maiores sit galisum
           voluptas hic ratione omnis?
         </p>
+        <form class="number-form">
+          <label for="inputNumber">Input a number:</label>
+          <br>
+          <input type="number" id="inputNumber" name="inputNumber" required>
+          <input type="submit" value="Minimum digit">
+        </form>
       </div>
       <div class="small-right">
-        <ul>
-          <li>This</li>
-          <li>list</li>
-          <li>exists</li>
-          <li>here</li>
-          <li>because</li>
-          <li>why not</li>
-        </ul>
+        Lorem ipsum dolor sit amet. Aut debitis omnis ea dolore earum et quasi
+        minima! Aut facilis galisum At facilis voluptatem et blanditiis alias
+        et totam obcaecati qui quis minus. Non obcaecati aperiam sed
+        reiciendis consequuntur et dolore ducimus et enim veniam. In
+        consequatur tempore a doloribus dolore qui eveniet maiores sit galisum
+        voluptas hic ratione omnis?
+        <form class="color-form">
+          <label for="inputColor">What color do you want to change the text to?</label>
+          <br>
+          <input type="text" id="inputColor" name="inputColor">
+        </form>
       </div>
     </main>
     <footer>
