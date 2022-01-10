@@ -82,7 +82,8 @@ body main .small-upper {
   grid-row: 1;
   padding: 30px;
 }
-.small-left, .small-right {
+.small-left,
+.small-right {
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -105,7 +106,8 @@ body main .small-upper {
   display: none;
 }
 
-.inserted-table, .inserted-cell {
+.inserted-table,
+.inserted-cell {
   border: var(--small-border-length) solid var(--border-color);
   background-color: var(--bg-color-white);
 }

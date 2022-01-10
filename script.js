@@ -8,7 +8,6 @@ const smallRight = document.querySelector('div.small-right');
 const smallLeft = document.querySelector('div.small-left');
 const numberForm = document.querySelector('.number-form');
 const inputColor = document.querySelector('#inputColor');
-const middleColumn = document.querySelector('.middle-column');
 
 const swapElements = (el1, el2) => {
   const temp = el2.innerText;
@@ -21,7 +20,7 @@ headerText.addEventListener(
   swapElements.bind(null, headerText, smallRight)
 );
 
-const circleArea = radius => Math.round(Math.PI * radius ** 2);
+const circleArea = radius => Math.round(Math.PI * Math.pow(radius, 2));
 smallLeft.append(`
   Circle radius: ${CIRCLE_RADIUS},
   calculated area: ${circleArea(CIRCLE_RADIUS)}
@@ -51,12 +50,6 @@ const numberFromSubmit = event => {
 
 numberForm.addEventListener('submit', numberFromSubmit);
 
-const getCookie = name => {
-  const entries = document.cookie.split('; ').map(c => c.split('='));
-  if (!entries.length) return undefined;
-  return entries.find(e => e[0] === name)[1];
-};
-
 const clearCookies = () => {
   const entries = document.cookie.split('; ').map(c => c.split('='));
   document.cookie = entries.map(e => `${e[0]}=; Max-Age=0`).join('; ');
@@ -72,7 +65,7 @@ const promptCookies = () => {
   );
   if (keepCookies) {
     alert(
-      `The cookies are kept for now. To change that you must reload the page`
+      'The cookies are kept for now. To change that you must reload the page'
     );
     return;
   }
@@ -122,10 +115,10 @@ const appendTable = column => {
     cellEl.classList.add('inserted-cell');
 
     index % 2 ? tr1.appendChild(cellEl) : tr2.appendChild(cellEl);
-  })
+  });
 
   table.append(tr1);
-  if(!even) table.appendChild(tr2);
+  if (!even) table.appendChild(tr2);
 
   column.appendChild(table);
   column.appendChild(table);
