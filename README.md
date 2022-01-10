@@ -1,3 +1,4 @@
-Web lab 1
+Web lab 2
 
-https://web-lab1-nine.vercel.app/
+Deployment:
+https://web-lab2k.vercel.app/
